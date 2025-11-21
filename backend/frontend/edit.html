@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Student - Student Management</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>✏️ Edit Student</h1>
+    <nav>
+      <a href="index.html">← Back to List</a>
+    </nav>
+  </header>
+  <main>
+    <form id="editForm">
+      <label>
+        Roll Number
+        <input name="roll" type="number" readonly placeholder="Roll number (read-only)" />
+      </label>
+      <label>
+        Full Name
+        <input name="name" type="text" maxlength="50" placeholder="Enter student name" />
+      </label>
+      <label>
+        Age
+        <input name="age" type="number" min="1" max="100" placeholder="Enter age" />
+      </label>
+      <label>
+        Branch
+        <input name="branch" type="text" maxlength="30" placeholder="Enter branch name" />
+      </label>
+      <div id="marks">
+        <h3 style="grid-column: 1 / -1; margin-bottom: 0.5rem; color: var(--text-primary);">Marks (Out of 100)</h3>
+        <label>Mark 1: <input name="mark1" type="number" step="0.01" min="0" max="100" placeholder="0-100" /></label>
+        <label>Mark 2: <input name="mark2" type="number" step="0.01" min="0" max="100" placeholder="0-100" /></label>
+        <label>Mark 3: <input name="mark3" type="number" step="0.01" min="0" max="100" placeholder="0-100" /></label>
+        <label>Mark 4: <input name="mark4" type="number" step="0.01" min="0" max="100" placeholder="0-100" /></label>
+        <label>Mark 5: <input name="mark5" type="number" step="0.01" min="0" max="100" placeholder="0-100" /></label>
+      </div>
+      <button type="submit">💾 Save Changes</button>
+      <div id="result"></div>
+    </form>
+  </main>
+  <script src="assets/script.js"></script>
+</body>
+</html>

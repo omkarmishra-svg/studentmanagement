@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎓 Student Management System</h1>
+    <nav>
+      <a href="add.html">➕ Add Student</a>
+      <a href="index.html">📋 View All</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>📊 All Students</h2>
+      <div class="controls">
+        <button id="refreshBtn">🔄 Refresh</button>
+        <button id="sortBtn">📈 Sort by Percentage</button>
+        <button id="countBtn">🔢 Show Count</button>
+        <button id="dummyBtn" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">🎲 Add Dummy Data</button>
+      </div>
+      <div id="countArea"></div>
+      <div style="overflow-x: auto;">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Branch</th>
+              <th>Marks</th>
+              <th>Percentage</th>
+              <th>Grade</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
