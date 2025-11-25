@@ -1,10 +1,16 @@
 from flask import Flask, request, jsonify, send_from_directory, abort, g
 from flask_cors import CORS
-from db import init_db, get_db
-from models import calculate_percentage_and_grade
 import os
 import traceback
 import sqlite3
+
+# Support running both as `backend.app` (Vercel) and `app` (local).
+try:
+    from backend.db import init_db, get_db  # type: ignore
+    from backend.models import calculate_percentage_and_grade  # type: ignore
+except ImportError:
+    from db import init_db, get_db
+    from models import calculate_percentage_and_grade
 
 app = Flask(__name__, static_folder="frontend", static_url_path="/")
 CORS(app)  # not strictly necessary if serving static from same server
